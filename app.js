@@ -106,12 +106,6 @@ function showCartItems(){
 }
 
 
-
-
-
-
-
-
 function bodyLoad(){
     loadCateogries();
     loadProducts('https://fakestoreapi.com/products');
