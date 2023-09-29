@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="bodyLoad()">
+    <header>
+        <nav class="d-flex w-100 justify-content-between align-items-center p-2 container-fluid">
+            <div>
+                <h4>Shopify</h4>
+            </div>
+            <div style="width: 500px;">
+                <ul style="margin-bottom: 0;" class="d-flex justify-content-between align-items-center">
+                    <li><a href="javascript:displayCategory('all')" class="active">Home</a></li>
+                    <li><a href="javascript:displayCategory('electronics')">Electronics</a></li>
+                    <li><a href="javascript:displayCategory('jewelery')">Jewelery</a></li>
+                    <li><a href="javascript:displayCategory('men\'s clothing')">Men's Fashion</a></li>
+                    <li><a href="javascript:displayCategory('women\'s clothing')">Women's Fashion</a></li>
+                </ul>
+            </div>
+            <div>
+                
+                <button onclick="showCartItems()" data-bs-target="#cart" data-bs-toggle="modal" class="bi bi-cart4 btn position-relative">
+                    <span id="lblCount" class="badge bg-danger text-white rounded-circle position-absolute"></span>
+                </button>
+                <div class="modal fade" id="cart">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Your Cart Items</h3>
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                            <th>Preview</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container-fluid text-center mt-4">
+        <div class="row">
+            <div class="col-2">
+                <select onchange="categoryChange()" class="form-select" id="lstCategory">
+                    <option value="all" selected>All</option>
+                   
+                  </select>
+            </div>
+            <div class="col-10">
+             <div class="card-container d-flex flex-wrap overflow-auto m-2" id="cardContainer" style="height:700px">
+
+             </div>
+            </div>
+        </div>
+
+    </section>
+
+    
+
+    <script src="./app.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+li{
+    list-style: none;
+    gap: 15px;
+}
+li a{
+    text-decoration: none;
+    color:gray;
+}
+li .active{
+    color: black;
+}
+
+.bi-search, .bi-cart4{
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+.card-title{
+    margin-bottom: 0;
+    height:50px;
+    overflow: auto;
+    margin-top: 5px;
+    padding-top: 2px;
+}
+
+
